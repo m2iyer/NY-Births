@@ -1,5 +1,5 @@
 ---
-title: "STAT 443 - Project"
+title: "NYbirth - Project"
 author: "Monica Iyer"
 date: "24/04/2020"
 output: 
@@ -16,8 +16,8 @@ Through this report, I assess the different models that can be used to forecast 
 ## Data Pre-processing
 
 ```{r,message=FALSE, warning=FALSE}
-nybirth <- read.csv("NYBirth.csv") #eliminate the first column from NYBirth 
-                                   #and save it as a csv
+nybirth <- read.csv("NYBirth.csv") #eliminate the first column of months and corresponding year
+                                   # from NYBirth  and save it as a csv
 nybirth_ts <- ts(nybirth, frequency=12, start=1946, end=1959+11/12)
 
 #divide into training and test sets
